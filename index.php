@@ -11,12 +11,12 @@
 <body>
     
 <a href="index.php">Hjem</a>
-<a href="funktionstole.php">Funktionstole</a>
-<a href="laenestole.php">Lænestole</a>
-<a href="spisebordsstole.php">Spisebordsstole</a>
-<a href="stabelstole.php">Stabelstole</a>
-<a href="sofaer.php">Sofaer</a>
-<a href="borde.php">Borde</a>
+<a href="./subpages/funktionstole.php">Funktionstole</a>
+<a href="./subpages/laenestole.php">Lænestole</a>
+<a href="./subpages/spisebordsstole.php">Spisebordsstole</a>
+<a href="./subpages/stabelstole.php">Stabelstole</a>
+<a href="./subpages/sofaer.php">Sofaer</a>
+<a href="./subpages/borde.php">Borde</a>
 
 
 
