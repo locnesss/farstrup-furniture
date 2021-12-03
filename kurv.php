@@ -73,33 +73,35 @@ tr:nth-child(even) {
 <?php } ?>
 
     <tr>
-      <td>Dit total er:</td>
+      <td> <b><u> Dit total er: </u></b> </td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
       <td></td>
-      <td>
-        <?php echo array_sum(array_column($customChair, "Sub-total")); ?>
-      </td>
+      <td> <b><u> 
+        <?php echo array_sum(array_column($customChair, "Sub-total")); ?> kr
+      </td> </u></b>
     </tr>
 
 </table>
 
 
+<pre>
+
+<?php
+
+print_r($customChair);
 
 
+print_r($customChair[2]);
+$myArray = array('order' => $customChair ,"name" => "loc" );
 
+print_r($myArray);
+?>
 
-
-
-
-
-
-</table>
-
-
+    </pre>
 
 </body>
 </html>
