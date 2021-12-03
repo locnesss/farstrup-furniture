@@ -15,13 +15,14 @@ include("../controller.php");
     <title>Funktionsstole</title>
 </head>
 <body>
-<a href="index.php">Hjem</a>
+<a href="../index.php">Hjem</a>
 <a href="./funktionstole.php">Funktionstole</a>
 <a href="./laenestole.php">Lænestole</a>
 <a href="./spisebordsstole.php">Spisebordsstole</a>
 <a href="./stabelstole.php">Stabelstole</a>
 <a href="./sofaer.php">Sofaer</a>
 <a href="./borde.php">Borde</a>
+<a href="../kurv.php">Kurv</a>
 <hr>
 <img src="../pictures/funkstol.jpg" alt="Farstrup Funktion stol" width="250" height="250">
 <h3>Prisen på stolen er 32660 <?php //echo($_POST["pris"]); ?> </h3>
@@ -52,24 +53,7 @@ include("../controller.php");
     <button type="submit" name="stole">Tilføj til kurv</button>
 </form>
 
-<?php
 
-
-
-/*
-$customchair = array(
-    "Produkt navn" => $_POST["prodName"], 
-    "Antal" => $_POST["qty"], 
-    "Sæde højde" => $_POST["højde"],
-    "Sæde dybde" => $_POST["dybde"],
-    "Sæde vinkel" => $_POST["vinkel"],
-    "Ryghøjde" => $_POST["rhøjde"]);
-
-print_r($customchair);
-*/
-
-
-?>
 
 
 

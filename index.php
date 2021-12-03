@@ -17,6 +17,8 @@
 <a href="./subpages/stabelstole.php">Stabelstole</a>
 <a href="./subpages/sofaer.php">Sofaer</a>
 <a href="./subpages/borde.php">Borde</a>
+<a href="kurv.php">Kurv</a>
+<hr>
 
 
 

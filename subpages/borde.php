@@ -14,6 +14,7 @@
 <a href="./stabelstole.php">Stabelstole</a>
 <a href="./sofaer.php">Sofaer</a>
 <a href="./borde.php">Borde</a>
+<a href="../kurv.php">Kurv</a>
 <hr>
 <img src="../pictures/bord.jpg" alt="Farstrup bord" width="250" height="250">
 <hr>
