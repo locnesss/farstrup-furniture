@@ -18,8 +18,5 @@ function getFromFile() {
     return $customChair;
 }
 
-
-
-
 ?>
 

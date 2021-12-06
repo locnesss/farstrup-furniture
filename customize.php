@@ -4,45 +4,14 @@ if (array_key_exists("nulstil", $_POST)) {
 }
 ?>
 
-<form method="post" name="materialer">
-    <?php 
-    if (isset($_SESSION["Materialer"])) {
-        echo ("Du har valgt ");
-        echo $_SESSION["betræk"]; 
-        echo " og ";
-        echo $_SESSION["stel"]; 
-        ?> 
-        
-        <button name="nulstil"> Nulstil </button> 
-    <?php       
-} 
-    else { ?>
 
-        <p>Vælg materiale og stel</p>
 
-        <label for="betræk">Vælg betræk:</label>
-            <select name="betræk">
-                <option value="Tekstil" > Tekstil </option>
-                <option value="Læder" > Læder (+2000 kr) </option>
-            </select>
-    <br>
-    <label for="stel">Vælg stel:</label>
-        <select name="stel">
-            <option value="Bøgetræ">Bøgetræ</option>
-            <option value="Metal">Metal (+3000kr)</option>
-        </select>
-    <button type="submit" name="Materialer">Gem</button>
-</form>
-
-<?php }
-
-?>
 
 <?php 
 
 if (isset($_SESSION["Materialer"])) {
     if ($_SESSION["betræk"] == "Læder") {
-        $customChair["Pris"] = $customChair["Pris"] + 2000 ;
+        $customChair["Pris"] = $customChair["Pris"] + 2000;
         }
     if ($_SESSION["stel"] == "Metal") {
         $customChair["Pris"] = $customChair["Pris"] + 3000;

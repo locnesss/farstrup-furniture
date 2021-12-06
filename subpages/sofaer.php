@@ -1,7 +1,25 @@
 <?php
-include("../functions.php");
-include("../controller.php");
+session_start();
 
+include("../functions.php");
+
+
+$customChair = array(
+    "Produkt navn" => null, 
+    "Antal" => null, 
+    "Sæde højde" => 47,
+    "Sæde dybde" => 72,
+    "Sæde vinkel" => 90,
+    "Ryghøjde" => 116,
+    "Pris" => 8900,
+    "Sub-total" => null);
+
+if (isset($_POST["Materialer"])) {
+    $_SESSION["Materialer"] = $_POST["Materialer"];
+    $_SESSION["betræk"] =$_POST["betræk"];
+    $_SESSION["stel"] = $_POST["stel"];
+    $_SESSION["prodName"] = $customChair["Produkt navn"];
+}
 
 ?>
 <hr>
@@ -25,32 +43,62 @@ include("../controller.php");
 <a href="../kurv.php">Kurv</a>
 <hr>
 <img src="../pictures/sofa.png" alt="Farstrup sofa" width="250" height="250">
-<h3>Prisen på stolen er 8.900 kr <?php //echo($_POST["pris"]); ?> </h3>
-<hr>
+
+<form method="post" name="materialer">
+    <?php if (isset($_SESSION["Materialer"])) {
+        echo ("Du har valgt ");
+        echo $_SESSION["betræk"]; 
+        echo " og ";
+        echo $_SESSION["stel"]; 
+        ?> <button name="nulstil"> Nulstil </button> 
+        <?php } 
+    else { ?>
+        <p>Vælg materiale og stel</p>
+        <label for="betræk">Vælg betræk:</label>
+            <select name="betræk">
+                <option value="Tekstil" > Tekstil </option>
+                <option value="Læder" > Læder (+2000 kr) </option>
+            </select>
+        <br>
+        <label for="stel">Vælg stel:</label>
+            <select name="stel">
+                <option value="Bøgetræ">Bøgetræ</option>
+                <option value="Metal">Metal (+3000kr)</option>
+            </select>
+        <button type="submit" name="Materialer">Gem</button>
+</form>
+
+<?php }
 
 
-<form method="post" name="stol">
-    <label for="højde">Sædehøjde:</label>
-        <input type="text" name="højde">
 
-    <label for="dybde">Sædedybde:</label>
-        <input type="text" name="dybde">
+if (isset($_SESSION["Materialer"])) {
+    if ($_SESSION["betræk"] == "Læder") {
+        $customChair["Pris"] = $customChair["Pris"] + 2000;
+        }
+    if ($_SESSION["stel"] == "Metal") {
+        $customChair["Pris"] = $customChair["Pris"] + 3000;
+        }
+}
 
-    <label for="vinkel">Sædevinkel:</label>
-        <input type="text" name="vinkel">
 
-    <label for="rhøjde">Ryg højde:</label>
-        <input type="text" name="rhøjde">
+include "../customize.php";
 
-    <label for="qty">Antal:</label>
-        <input type="text" name="qty">
-
-    <input type="hidden" id="prodName" name="prodName" value="Sofa">
+if (isset($_SESSION["Materialer"])) {
+    ?>
+        <label for="qty">Antal:</label>
+            <input type="text" name="qty">
+        <input type="hidden" name="prodName" value="Sofa">
+        <input type="hidden" id="pris" name="pris" value="8900">
+        <button type="submit" name="stole">Tilføj til kurv</button>
     
-    <input type="hidden" id="pris" name="pris" value="8900">
+    <?php }  
+include "../writeToFile.php";
 
+session_destroy();
 
-    <button type="submit" name="stole">Tilføj til kurv</button>
+    ?>
+
 </form>
 
 </body>
