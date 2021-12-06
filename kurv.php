@@ -62,11 +62,11 @@ tr:nth-child(even) {
     foreach ($customChair as $order) { ?>
     <tr>
         <td> <?php echo $order["Produkt navn"]; ?> </td>
-        <td> <?php echo $order["Antal"]; ?> </td>
         <td> <?php echo $order["Sæde højde"]; ?> </td>
         <td> <?php echo $order["Sæde dybde"]; ?> </td>
         <td> <?php echo $order["Sæde vinkel"]; ?> </td>
         <td> <?php echo $order["Ryghøjde"]; ?> </td>
+        <td> <?php echo $order["Antal"]; ?> </td>
         <td> <?php echo $order["Pris"]; ?> </td>
         <td> <?php echo $order["Sub-total"]; ?> </td>
     </tr>

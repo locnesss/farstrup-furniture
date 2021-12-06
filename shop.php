@@ -1,66 +1,5 @@
-<?php
-session_start();
-?>
-
-
-<?php
-include("../functions.php");
-include("../controller.php");
-
-$customChair = array(
-    "Produkt navn" => null, 
-    "Antal" => null, 
-    "Sæde højde" => 47,
-    "Sæde dybde" => 72,
-    "Sæde vinkel" => 90,
-    "Ryghøjde" => 116,
-    "Pris" => 32660,
-    "Sub-total" => null);
-
-if (isset($_POST["Materialer"])) {
-    $_SESSION["Materialer"] = $_POST["Materialer"];
-    $_SESSION["betræk"] =$_POST["betræk"];
-    $_SESSION["stel"] = $_POST["stel"];
-    $_SESSION["prodName"] = $customChair["Produkt navn"];
-
-}
-
-
-
-
-
-?>
-
-
-
-
-<hr>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Funktionsstole</title>
-</head>
-<body>
-<a href="../index.php">Hjem</a>
-<a href="./funktionstole.php">Funktionstole</a>
-<a href="./laenestole.php">Lænestole</a>
-<a href="./spisebordsstole.php">Spisebordsstole</a>
-<a href="./stabelstole.php">Stabelstole</a>
-<a href="./sofaer.php">Sofaer</a>
-<a href="./borde.php">Borde</a>
-<a href="../kurv.php">Kurv</a>
-<hr>
-<img src="../pictures/funkstol.jpg" alt="Farstrup Funktion stol" width="250" height="250">
 
 <?php 
-
-include "../customize.php";
-
-/*
 if (array_key_exists("nulstil", $_POST)) {
     unset($_SESSION["Materialer"]);
 }
@@ -173,12 +112,15 @@ if (isset($_POST["ja"])) {  ?>
     
     <br>
 
-<?php 
-} */
+<?php
 
 
+}
+
+/*
 if (isset($_SESSION["Materialer"])) {
 ?>
+
     <label for="qty">Antal:</label>
         <input type="text" name="qty">
     <input type="hidden" name="prodName" value="Funktionstole">
@@ -187,37 +129,26 @@ if (isset($_SESSION["Materialer"])) {
 
     <button type="submit" name="stole">Tilføj til kurv</button>
 
-<?php }  
+<?php }
 
-include "../writeToFile.php";
 /*
-
 if (isset($_POST["stole"])) {
-    $_SESSION["qty"] = $_POST["qty"];
-    $customChair["Antal"] = $_SESSION["qty"];
+    $customChair["Antal"] = $_POST["qty"];
     $_SESSION["prodName"] = $_POST["prodName"];
     $customChair["Produkt navn"] = $_SESSION["prodName"];
     $customChair["Sub-total"] = $customChair["Pris"] * $customChair["Antal"];
-    $_SESSION["customizedChair"] = $customChair;
+    $_SESSION["customChair"] = $customChair;
     echo "Din varer er tilføjet til kurven";
-    print_r($customChair);
 
 }
 
-if(isset($_POST["stole"])) {
-    $chair = getFromFile();
-    $jsonCart = json_encode($chair);
-    $chair[] = $_SESSION["customizedChair"];
-    $jsonCart = json_encode($chair);
-    file_put_contents("C:\\xampp\\htdocs\\farstrup-furniture\\cart.json",$jsonCart);
-}
 
+print_r($_SESSION["customChair"]);
 
-*/
 ?>
 </form>
 
 
 
 </body>
-</html>
+</html> */ ?>

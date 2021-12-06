@@ -1,9 +1,10 @@
 <?php
 
-if(isset($_POST["stole"])) {
+/*if(isset($_POST["stole"])) {
     addCart();
+    //addCaart();
 }
-
+*/
 /*
 function addCart() {
     $customchair = array(
@@ -18,4 +19,17 @@ function addCart() {
 }
 
 */
+
+function addCaart() {
+    if (isset($_POST["stole"])) {
+        $customChair["Antal"] = $_POST["qty"];
+        $_SESSION["prodName"] = $_POST["prodName"];
+        $customChair["Produkt navn"] = $_SESSION["prodName"];
+        $customChair["Sub-total"] = $customChair["Pris"] * $customChair["Antal"];
+        $_SESSION["customChair"] = $customChair;
+        echo "Din varer er tilføjet til kurven";
+    }
+}
+
+
 ?>

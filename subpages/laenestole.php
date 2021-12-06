@@ -1,9 +1,34 @@
 <?php
+session_start();
+
 include("../functions.php");
 include("../controller.php");
 
+if (isset($_POST["Materialer"])) {
+    $_SESSION["Materialer"] = $_POST["Materialer"];
+    $_SESSION["betræk"] =$_POST["betræk"];
+    $_SESSION["stel"] = $_POST["stel"];
+}
+
+
+$customChair = array(
+    "Produkt navn" => null, 
+    "Antal" => null, 
+    "Sæde højde" => 47,
+    "Sæde dybde" => 72,
+    "Sæde vinkel" => 90,
+    "Ryghøjde" => 116,
+    "Pris" => 32660,
+    "Sub-total" => null);
+
+
 
 ?>
+
+
+
+
+
 <hr>
 
 <!DOCTYPE html>
@@ -25,7 +50,15 @@ include("../controller.php");
 <a href="../kurv.php">Kurv</a>
 <hr>
 <img src="../pictures/laenestol.jpg" alt="Farstrup Lænestol" width="250" height="250">
-<h3>Prisen på stolen er 14995 <?php //echo($_POST["pris"]); ?> </h3>
+
+<?php
+
+include "../shop.php";
+
+
+/*
+
+
 <hr>
 
 
@@ -44,13 +77,27 @@ include("../controller.php");
 
     <label for="qty">Antal:</label>
         <input type="text" name="qty">
+*/ ?>
 
-    <input type="hidden" id="prodName" name="prodName" value="Lænestol">
-    
-    <input type="hidden" id="pris" name="pris" value="14995">
+<?php
+if (isset($_SESSION["Materialer"])) {
+?>
+
+    <label for="qty">Antal:</label>
+        <input type="text" name="qty">
+        <input type="hidden" id="prodName" name="prodName" value="Lænestol">
+        <input type="hidden" id="pris" name="pris" value="14995">
 
 
     <button type="submit" name="stole">Tilføj til kurv</button>
+
+<?php } ?>
+
+
 </form>
 </body>
 </html>
+
+ <?php 
+ //addCart();
+ ?>
