@@ -1,6 +1,5 @@
 <?php
 include("./functions.php");
-include("./controller.php");
 
 
 ?>
@@ -52,6 +51,8 @@ tr:nth-child(even) {
         <th>    Sæde Dybde    </th>
         <th>    Sæde Vinkel    </th>
         <th>    Ryg højde    </th>
+        <th>    Betræk    </th>
+        <th>    Stel    </th>
         <th>    Antal    </th>
         <th>    Styk Pris    </th>
         <th>    Subtotal    </th>
@@ -66,6 +67,8 @@ tr:nth-child(even) {
         <td> <?php echo $order["Sæde dybde"]; ?> </td>
         <td> <?php echo $order["Sæde vinkel"]; ?> </td>
         <td> <?php echo $order["Ryghøjde"]; ?> </td>
+        <td> <?php echo $order["Betræk"]; ?> </td>
+        <td> <?php echo $order["Stel"]; ?> </td>
         <td> <?php echo $order["Antal"]; ?> </td>
         <td> <?php echo $order["Pris"]; ?> </td>
         <td> <?php echo $order["Sub-total"]; ?> </td>
@@ -80,9 +83,14 @@ tr:nth-child(even) {
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
+      <td></td>
       <td> <b><u> 
         <?php echo array_sum(array_column($customChair, "Sub-total")); ?> kr
       </td> </u></b>
+    </tr>
+    <tr>
+      <th>hej med dig</th>
     </tr>
 
 </table>
@@ -92,13 +100,7 @@ tr:nth-child(even) {
 
 <?php
 
-print_r($customChair);
 
-
-print_r($customChair[2]);
-$myArray = array('order' => $customChair ,"name" => "loc" );
-
-print_r($myArray);
 ?>
 
     </pre>

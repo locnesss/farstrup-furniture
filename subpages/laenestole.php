@@ -19,6 +19,8 @@ if (isset($_POST["Materialer"])) {
     $_SESSION["betræk"] =$_POST["betræk"];
     $_SESSION["stel"] = $_POST["stel"];
     $_SESSION["prodName"] = $customChair["Produkt navn"];
+    $customChair["Betræk"] = $_SESSION["betræk"];
+    $customChair["Stel"] = $_SESSION["stel"];
 
 }
 ?>

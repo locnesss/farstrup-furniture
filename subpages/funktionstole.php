@@ -10,6 +10,8 @@ $customChair = array(
     "Sæde dybde" => 72,
     "Sæde vinkel" => 90,
     "Ryghøjde" => 116,
+    "Betræk" => null,
+    "Stel" => null,
     "Pris" => 32660,
     "Sub-total" => null);
 
@@ -18,6 +20,8 @@ if (isset($_POST["Materialer"])) {
     $_SESSION["betræk"] =$_POST["betræk"];
     $_SESSION["stel"] = $_POST["stel"];
     $_SESSION["prodName"] = $customChair["Produkt navn"];
+    //$customChair["Betræk"] = $_SESSION["betræk"];
+    //$customChair["Stel"] = $_SESSION["stel"];
 }
 ?>
 
@@ -97,7 +101,7 @@ if (isset($_SESSION["Materialer"])) {
 
 include "../writeToFile.php";
 
-session_destroy();
+//session_destroy();
 
 ?>
 
