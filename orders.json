@@ -1,0 +1,138 @@
+[
+    {
+        "OrdrerNr": 1,
+        "Fornavn": "4",
+        "Efternavn": "4",
+        "Adresse": "4",
+        "By": "4",
+        "Ordrer": [
+            {
+                "Produkt navn": "L\u00e6nestol",
+                "Antal": "2",
+                "S\u00e6de h\u00f8jde": 47,
+                "S\u00e6de dybde": 72,
+                "S\u00e6de vinkel": 90,
+                "Rygh\u00f8jde": 116,
+                "Pris": 14995,
+                "Sub-total": 29990,
+                "Betr\u00e6k": "Tekstil",
+                "Stel": "B\u00f8getr\u00e6"
+            }
+        ]
+    },
+    {
+        "OrdrerNr": 2,
+        "Fornavn": "6",
+        "Efternavn": "6",
+        "Adresse": "6",
+        "By": "6",
+        "Ordrer": [
+            {
+                "Produkt navn": "L\u00e6nestol",
+                "Antal": "3",
+                "S\u00e6de h\u00f8jde": 47,
+                "S\u00e6de dybde": 72,
+                "S\u00e6de vinkel": 90,
+                "Rygh\u00f8jde": 116,
+                "Pris": 14995,
+                "Sub-total": 44985,
+                "Betr\u00e6k": "Tekstil",
+                "Stel": "B\u00f8getr\u00e6"
+            }
+        ]
+    },
+    {
+        "OrdrerNr": 3,
+        "Fornavn": "5",
+        "Efternavn": "5",
+        "Adresse": "5",
+        "By": "5",
+        "Ordrer": [
+            {
+                "Produkt navn": "Funktionstole",
+                "Antal": "5",
+                "S\u00e6de h\u00f8jde": 47,
+                "S\u00e6de dybde": 72,
+                "S\u00e6de vinkel": 90,
+                "Rygh\u00f8jde": 116,
+                "Betr\u00e6k": "Tekstil",
+                "Stel": "B\u00f8getr\u00e6",
+                "Pris": 32660,
+                "Sub-total": 163300
+            }
+        ]
+    },
+    {
+        "OrdrerNr": 4,
+        "Fornavn": null,
+        "Efternavn": null,
+        "Adresse": null,
+        "By": null,
+        "Ordrer": []
+    },
+    {
+        "OrdrerNr": 5,
+        "Fornavn": null,
+        "Efternavn": null,
+        "Adresse": null,
+        "By": null,
+        "Ordrer": []
+    },
+    {
+        "OrdrerNr": 6,
+        "Fornavn": null,
+        "Efternavn": null,
+        "Adresse": null,
+        "By": null,
+        "Ordrer": []
+    },
+    {
+        "OrdrerNr": 7,
+        "Fornavn": null,
+        "Efternavn": null,
+        "Adresse": null,
+        "By": null,
+        "Ordrer": [
+            {
+                "Produkt navn": "Funktionstole",
+                "Antal": "10",
+                "S\u00e6de h\u00f8jde": 47,
+                "S\u00e6de dybde": 72,
+                "S\u00e6de vinkel": 90,
+                "Rygh\u00f8jde": 116,
+                "Betr\u00e6k": "L\u00e6der",
+                "Stel": "Metal",
+                "Pris": 42660,
+                "Sub-total": 426600
+            },
+            {
+                "Produkt navn": "Stabelstol",
+                "Antal": "10",
+                "S\u00e6de h\u00f8jde": 47,
+                "S\u00e6de dybde": 72,
+                "S\u00e6de vinkel": 90,
+                "Rygh\u00f8jde": 116,
+                "Pris": 10115,
+                "Sub-total": 101150,
+                "Betr\u00e6k": "L\u00e6der",
+                "Stel": "Metal"
+            }
+        ]
+    },
+    {
+        "OrdrerNr": 8,
+        "Fornavn": null,
+        "Efternavn": null,
+        "Adresse": null,
+        "By": null,
+        "Ordrer": []
+    },
+    {
+        "OrdrerNr": 9,
+        "Fornavn": "hej",
+        "Efternavn": "med",
+        "Adresse": "dig",
+        "By": "dig",
+        "Ordrer": []
+    }
+]
