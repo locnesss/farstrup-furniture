@@ -1,5 +1,12 @@
 <?php 
 
+if (isset($_POST["stole"]) and isset($_POST["ja"])) {
+    $customChair["Sæde højde"] = $_POST["højde"];
+    $customChair["Sæde dybde"] = $_POST["dybde"];
+    $customChair["Sæde vinkel"] = $_POST["vinkel"];
+    $customChair["Ryghøjde"] = $_POST["rhøjde"];
+}
+
 if (isset($_POST["stole"])) {
     $_SESSION["qty"] = $_POST["qty"];
     $customChair["Antal"] = $_SESSION["qty"];

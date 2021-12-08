@@ -1,11 +1,12 @@
 <?php
+session_start();
 include "./functions.php";
 $title = "Betaling";
 include "./header.php";
 ?>
 
 <form method="post" name="kunde">
-    <?php if (!isset($_POST["gem"])) { ?>
+    <?php if (!isset($_SESSION["Gem"])) { ?>
         <label for="fname">Fornavn: </label>
         <input type="text" name="fname">
         <br>
@@ -19,13 +20,14 @@ include "./header.php";
         <input type="text" name="by">
         <button type="submit" name="gem">Gem oplysninger</button>
 </form>
+
 <?php } else {
         $ordrer = array(
             "OrdrerNr" => null,
-            "Fornavn" => $_POST["fname"],
-            "Efternavn" => $_POST["lname"],
-            "Adresse" => $_POST["addr"],
-            "By" => $_POST["by"],
+            "Fornavn" => $_SESSION["fname"],
+            "Efternavn" => $_SESSION["lname"],
+            "Adresse" => $_SESSION["addr"],
+            "By" => $_SESSION["by"],
             "Ordrer" => getFromFile()
         );
         $emptyCart = "[]";
@@ -39,10 +41,25 @@ include "./header.php";
         }
         $jsonOrders = json_encode($allOrders, JSON_PRETTY_PRINT);
         file_put_contents("C:\\xampp\\htdocs\\farstrup-furniture\\orders.json", $jsonOrders);
-        $ordrernr = end($allOrders);
-        echo "Dit ordrer nr er:" . " " . $ordrernr["OrdrerNr"];
+        $_SESSION["Ordrer"] = end($allOrders);
+        echo "Dit ordrer nr er:" . " " . $_SESSION["Ordrer"]["OrdrerNr"];
     }
+    ?> <a href="./orderConfirm.php">Klik her for din Ordrebekræftelse</a> <?php
+
+
 ?>
+
+
+<?php if (isset($_POST["gem"])) {
+    $_SESSION["Gem"] = $_POST["gem"];
+    $_SESSION["fname"] = $_POST["fname"];
+    $_SESSION["lname"] = $_POST["lname"];
+    $_SESSION["addr"] = $_POST["addr"];
+    $_SESSION["by"] = $_POST["by"];
+    header("Refresh:0");
+}  ?>
+
+
 
 </body>
 
