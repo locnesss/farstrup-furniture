@@ -31,7 +31,6 @@
   <a href="http://localhost/farstrup-furniture/subpages/spisebordsstole.php">Spisebordsstole</a>
   <a href="http://localhost/farstrup-furniture/subpages/stabelstole.php">Stabelstole</a>
   <a href="http://localhost/farstrup-furniture/subpages/sofaer.php">Sofaer</a>
-  <a href="http://localhost/farstrup-furniture/subpages/borde.php">Borde</a>
   <a href="http://localhost/farstrup-furniture/kurv.php">Kurv</a>
   <a href="http://localhost/farstrup-furniture/orderConfirm.php">Ordrer</a>
 
