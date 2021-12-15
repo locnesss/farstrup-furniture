@@ -1,8 +1,10 @@
 <?php
 session_start();
 
-$title = "Stabelstole";
-include "../header.php";
+$title = "Funktionsstole";
+require "./header.php";
+
+
 
 $customChair = array(
     "Produkt navn" => null,
@@ -11,23 +13,23 @@ $customChair = array(
     "Sæde dybde" => 72,
     "Sæde vinkel" => 90,
     "Ryghøjde" => 116,
-    "Pris" => 4215,
+    "Betræk" => null,
+    "Stel" => null,
+    "Pris" => 32660,
     "Sub-total" => null
 );
 
-include("../functions.php");
+include("./functions.php");
+
+
 
 ?>
-
-<img src="../pictures/stabstol.jpg" alt="Farstrup Stabelstol" width="250" height="250">
+<img src="./pictures/funkstol.jpg" alt="Farstrup Funktion stol" width="250" height="250">
 
 <form method="post" name="materialer">
     <?php
     if (isset($_SESSION["Materialer"])) {
-        echo ("Du har valgt ");
-        echo $_SESSION["betræk"];
-        echo " og ";
-        echo $_SESSION["stel"];
+        echo ("Du har valgt ") . $_SESSION["betræk"] . " og " . $_SESSION["stel"];
     ?>
 
         <button name="nulstil"> Nulstil </button>
@@ -39,13 +41,13 @@ include("../functions.php");
         <label for="betræk">Vælg betræk:</label>
         <select name="betræk">
             <option value="Tekstil"> Tekstil </option>
-            <option value="Læder"> Læder (+400 kr) </option>
+            <option value="Læder"> Læder (+2000 kr) </option>
         </select>
         <br>
         <label for="stel">Vælg stel:</label>
         <select name="stel">
             <option value="Bøgetræ">Bøgetræ</option>
-            <option value="Metal">Metal (+500 kr)</option>
+            <option value="Metal">Metal (+3000kr)</option>
         </select>
         <button type="submit" name="Materialer">Gem</button>
 </form>
@@ -54,31 +56,31 @@ include("../functions.php");
 
     if (isset($_SESSION["Materialer"])) {
         if ($_SESSION["betræk"] == "Læder") {
-            $customChair["Pris"] = $customChair["Pris"] + 400;
+            $customChair["Pris"] = $customChair["Pris"] + 2000;
         }
         if ($_SESSION["stel"] == "Metal") {
-            $customChair["Pris"] = $customChair["Pris"] + 500;
+            $customChair["Pris"] = $customChair["Pris"] + 3000;
         }
     }
 
-    include "../customize.php";
+    include "./customize.php";
+
     if (isset($_SESSION["Materialer"])) {
 ?>
     <label for="qty">Antal:</label>
     <input type="text" name="qty">
-    <input type="hidden" id="prodName" name="prodName" value="Stabelstol">
-
-    <input type="hidden" id="pris" name="pris" value="4215">
+    <input type="hidden" name="prodName" value="Funktionstole">
+    <input type="hidden" id="pris" name="pris" value="32660">
     <button type="submit" name="stole">Tilføj til kurv</button>
 <?php }
 
-    include "../writeToFile.php";
+    include "./writeToFile.php";
+
+    //session_destroy();
+
 ?>
 
-
 </form>
-
-
 </body>
 
 </html>

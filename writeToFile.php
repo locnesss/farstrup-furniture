@@ -24,7 +24,7 @@ if(isset($_POST["stole"])) {
     $jsonCart = json_encode($chair);
     $chair[] = $_SESSION["customizedChair"];
     $jsonCart = json_encode($chair);
-    file_put_contents("C:\\xampp\\htdocs\\farstrup-furniture\\cart.json",$jsonCart);
+    file_put_contents("./cart.json",$jsonCart);
     session_destroy();
 }
 

@@ -40,7 +40,7 @@ include "./header.php";
             $aOrde["OrdrerNr"] = 0 + $i;
         }
         $jsonOrders = json_encode($allOrders, JSON_PRETTY_PRINT);
-        file_put_contents("C:\\xampp\\htdocs\\farstrup-furniture\\orders.json", $jsonOrders);
+        file_put_contents("./orders.json", $jsonOrders);
         $_SESSION["Ordrer"] = end($allOrders);
         echo "Dit ordrer nr er:" . " " . $_SESSION["Ordrer"]["OrdrerNr"];
     }

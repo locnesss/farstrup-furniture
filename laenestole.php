@@ -1,8 +1,9 @@
 <?php
 session_start();
 
-$title = "Funktionsstole";
-require "../header.php";
+
+$title = "Lænestole";
+include("./header.php");
 
 
 
@@ -13,23 +14,24 @@ $customChair = array(
     "Sæde dybde" => 72,
     "Sæde vinkel" => 90,
     "Ryghøjde" => 116,
-    "Betræk" => null,
-    "Stel" => null,
-    "Pris" => 32660,
+    "Pris" => 14995,
     "Sub-total" => null
 );
 
-include("../functions.php");
-
+include("./functions.php");
 
 
 ?>
-<img src="../pictures/funkstol.jpg" alt="Farstrup Funktion stol" width="250" height="250">
+
+<img src="./pictures/laenestol.jpg" alt="Farstrup Lænestol" width="250" height="250">
 
 <form method="post" name="materialer">
     <?php
     if (isset($_SESSION["Materialer"])) {
-        echo ("Du har valgt ") . $_SESSION["betræk"] . " og " . $_SESSION["stel"];
+        echo ("Du har valgt ");
+        echo $_SESSION["betræk"];
+        echo " og ";
+        echo $_SESSION["stel"];
     ?>
 
         <button name="nulstil"> Nulstil </button>
@@ -63,23 +65,20 @@ include("../functions.php");
         }
     }
 
-    include "../customize.php";
-
+    include "./customize.php";
     if (isset($_SESSION["Materialer"])) {
 ?>
     <label for="qty">Antal:</label>
     <input type="text" name="qty">
-    <input type="hidden" name="prodName" value="Funktionstole">
-    <input type="hidden" id="pris" name="pris" value="32660">
+    <input type="hidden" name="prodName" value="Lænestol">
+    <input type="hidden" id="pris" name="pris" value="14995">
     <button type="submit" name="stole">Tilføj til kurv</button>
 <?php }
 
-    include "../writeToFile.php";
+include "./writeToFile.php";
 
-    //session_destroy();
 
 ?>
-
 </form>
 </body>
 

@@ -25,14 +25,14 @@
 </head>
 
 <body>
-  <a href="http://localhost/farstrup-furniture/index.php">Hjem</a>
-  <a href="http://localhost/farstrup-furniture/subpages/funktionstole.php">Funktionstole</a>
-  <a href="http://localhost/farstrup-furniture/subpages/laenestole.php">Lænestole</a>
-  <a href="http://localhost/farstrup-furniture/subpages/spisebordsstole.php">Spisebordsstole</a>
-  <a href="http://localhost/farstrup-furniture/subpages/stabelstole.php">Stabelstole</a>
-  <a href="http://localhost/farstrup-furniture/subpages/sofaer.php">Sofaer</a>
-  <a href="http://localhost/farstrup-furniture/kurv.php">Kurv</a>
-  <a href="http://localhost/farstrup-furniture/orderConfirm.php">Ordrer</a>
+  <a href="./index.php">Hjem</a>
+  <a href="./subpages/funktionstole.php">Funktionstole</a>
+  <a href="./subpages/laenestole.php">Lænestole</a>
+  <a href="./subpages/spisebordsstole.php">Spisebordsstole</a>
+  <a href="./subpages/stabelstole.php">Stabelstole</a>
+  <a href="./subpages/sofaer.php">Sofaer</a>
+  <a href="./kurv.php">Kurv</a>
+  <a href="./orderConfirm.php">Ordrer</a>
 
   <hr>
   
