@@ -35,3 +35,4 @@
   <a href="http://localhost/farstrup-furniture/orderConfirm.php">Ordrer</a>
 
   <hr>
+  
