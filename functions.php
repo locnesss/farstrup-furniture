@@ -11,7 +11,7 @@ if (isset($_POST["Materialer"])) {
 
 function getFromFile()
 {
-    $jsonCart = file_get_contents("C:\\xampp\\htdocs\\farstrup-furniture\\cart.json");
+    $jsonCart = file_get_contents("./cart.json");
     $customChair = json_decode($jsonCart, true);
     //print_r($notesArray);
     return $customChair;
@@ -19,7 +19,7 @@ function getFromFile()
 
 function getOrders()
 {
-    $jsonOrders = file_get_contents("C:\\xampp\\htdocs\\farstrup-furniture\\orders.json");
+    $jsonOrders = file_get_contents("./orders.json");
     $od = json_decode($jsonOrders, true);
     //print_r($notesArray);
     return $od;
@@ -32,7 +32,7 @@ function deleteFromFile()
     unset($cart[$index]);
     //return $notesArray;
     $jsonCart = json_encode($cart);
-    file_put_contents("C:\\xampp\\htdocs\\farstrup-furniture\\cart.json", $jsonCart);
+    file_put_contents("./cart.json", $jsonCart);
     getFromFile();
     header("Location:kurv.php");
 }
