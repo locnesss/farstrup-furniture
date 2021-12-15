@@ -32,7 +32,6 @@
   <a href="./stabelstole.php">Stabelstole</a>
   <a href="./sofaer.php">Sofaer</a>
   <a href="./kurv.php">Kurv</a>
-  <a href="./orderConfirm.php">Ordrer</a>
 
   <hr>
   
