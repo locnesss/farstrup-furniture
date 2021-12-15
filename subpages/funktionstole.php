@@ -21,6 +21,8 @@ $customChair = array(
 
 include("../functions.php");
 
+
+
 ?>
 <img src="../pictures/funkstol.jpg" alt="Farstrup Funktion stol" width="250" height="250">
 

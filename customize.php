@@ -4,14 +4,7 @@ if (array_key_exists("nulstil", $_POST)) {
     header("Refresh:0");
 }
 
-if (isset($_SESSION["Materialer"])) {
-    if ($_SESSION["betræk"] == "Læder") {
-        $customChair["Pris"] = $customChair["Pris"] + 2000;
-    }
-    if ($_SESSION["stel"] == "Metal") {
-        $customChair["Pris"] = $customChair["Pris"] + 3000;
-    }
-}
+
 ?>
 
 <p>Vil du justere produktet yderligere?</p>
